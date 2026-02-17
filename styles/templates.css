@@ -1,0 +1,12 @@
+.small-pokemon-card {
+    border: black solid;
+    height: 300px;
+    width: 300px;
+    box-sizing: border-box;
+    padding: 12px;
+}
+
+.small-card-top {
+    display: flex;
+    justify-content: space-between;
+}

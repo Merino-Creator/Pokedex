@@ -17,6 +17,12 @@
     height: 100%;
 }
 
+#mainContainer {
+    box-sizing: border-box;
+    padding: 40px;
+    width: 100%;
+}
+
 .footer-content {
     height: 100%;
     display: flex;
