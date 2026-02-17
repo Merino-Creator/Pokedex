@@ -3,6 +3,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-left: 24px;
+    margin-right: 24px;
 }
 
 .header-start {
@@ -18,6 +20,8 @@
 .footer-content {
     height: 100%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
+    margin-left: 24px;
+    margin-right: 24px;
 }
