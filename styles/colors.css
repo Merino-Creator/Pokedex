@@ -1,0 +1,59 @@
+.grass {
+    background-color: green;
+}
+
+.fire {
+    background-color: red;
+}
+
+.water {
+    background-color: blue;
+}
+
+.normal {
+    background-color: lightgray;
+}
+
+.electric {
+    background-color: yellow;
+}
+
+.rock {
+    background-color: slategrey;
+}
+
+.ground {
+    background-color: brown;
+}
+
+.fighting {
+    background-color: bisque;
+}
+
+.flying {
+    background-color: lightskyblue;
+}
+
+.bug {
+    background-color: greenyellow;
+}
+
+.poison {
+    background-color: purple;
+}
+
+.ghost {
+    background-color: black;
+}
+
+.dragon {
+    background-color: gold;
+}
+
+.ice {
+    background-color: lightblue;
+}
+
+.psychic {
+    background-color: violet;
+}
