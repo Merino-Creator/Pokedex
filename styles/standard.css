@@ -1,7 +1,15 @@
+/* body */
 body {
     margin: 0;
     height: 100vh;
-    background-color: rgb(44, 1, 66);
+    background: linear-gradient(90deg,
+    #999 5%,
+    #fff 10%,
+    #ccc 30%,
+    #ddd 50%,
+    #ccc 70%,
+    #fff 80%,
+    #999 95%);
     color: white;
     display: flex;
     flex-direction: column;
@@ -15,7 +23,7 @@ body {
 }
 
 header {
-    background-color: black;
+    background: linear-gradient(to right, black 25%, white 80%);
     display: flex;
     justify-content: center;
     height: 80px;
@@ -30,9 +38,26 @@ main {
 }
 
 footer {
-    background-color: black;
+    background: linear-gradient(to right, white 0%, black 80%);
     display: flex;
     justify-content: center;
     height: 80px;
     width: 100%;
+}
+
+/* elements */
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+.link-black{
+    color: black;
+}
+
+.link-white {
+    color: white;
 }
