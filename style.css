@@ -21,6 +21,9 @@
     box-sizing: border-box;
     padding: 40px;
     width: 100%;
+    gap: 12px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .footer-content {
