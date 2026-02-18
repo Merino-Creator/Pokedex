@@ -1,4 +1,4 @@
-.logo-img {
+.header-img {
     height: 40px;
 }
 
@@ -8,4 +8,13 @@
     border-radius: 12px;
     border: none;
     box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.801);
+}
+
+.footer-img {
+    height: 48px;
+    mix-blend-mode: multiply;
+}
+
+.footer-img:hover {
+    cursor: pointer;
 }

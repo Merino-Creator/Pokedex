@@ -7,3 +7,7 @@ function addSmallPokemonCard() {
 
     smallCardRef.innerHTML += smallPokemonCardTemplate();
 }
+
+function changeMode() {
+    
+}
