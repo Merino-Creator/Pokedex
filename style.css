@@ -1,10 +1,10 @@
 .header-content {
-    height: 100%;
+    height: 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-left: 24px;
-    margin-right: 24px;
+    margin-left: 32px;
+    margin-right: 32px;
 }
 
 .header-start {
@@ -13,24 +13,21 @@
     gap: 24px;
 }
 
-.main-content {
-    height: 100%;
-}
-
 #mainContainer {
     box-sizing: border-box;
-    padding: 40px;
+    padding: 32px;
     width: 100%;
     gap: 12px;
     display: flex;
     flex-wrap: wrap;
+    flex: 1;
 }
 
 .footer-content {
-    height: 100%;
+    height: 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-left: 24px;
-    margin-right: 24px;
+    margin-left: 32px;
+    margin-right: 32px;
 }
