@@ -14,7 +14,7 @@ function smallPokemonCardTemplate(stats) {  // ich habe auf alle daten zugriff.
             </div>
 
             <div class="small-card-bottom">
-                <div>
+                <div class="small-card-types-box">
                     ${typesHTML}
                 </div>
                 <img class="small-card-sprite" src="${stats.sprites.front_default}">

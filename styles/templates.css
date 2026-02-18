@@ -27,6 +27,12 @@
     height: 120px;
 }
 
+.small-card-types-box {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
 .small-card-types {
     border-radius: 12px;
     border: black solid;
