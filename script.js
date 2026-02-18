@@ -1,3 +1,5 @@
+let renderCount = 20;
+
 async function init() {
     await savePokeData(); 
     addSmallPokemonCard(); 
@@ -6,9 +8,18 @@ async function init() {
 function addSmallPokemonCard() {
     let smallCardRef = document.getElementById('mainContainer');
 
-    for (let index = 0; index < allPokemon.length; index++) {
+    smallCardRef.innerHTML = "";
+
+    let max = Math.min(allPokemon.length, renderCount);
+
+    for (let index = 0; index < max; index++) {
         smallCardRef.innerHTML += smallPokemonCardTemplate(index);
     }
+}
+
+function loadMore() {
+    renderCount += 20;
+    addSmallPokemonCard();
 }
 
 function changeMode() {
