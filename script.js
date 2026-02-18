@@ -18,16 +18,6 @@ async function addSmallPokemonCard() {  // ich bearbeite die funktion so, dass d
     }
 }
 
-async function addTypeTemplate() {
-    let typeRef = document.getElementById('smallCardType');
-    typeRef.innerHTML = "";
-    
-    for (let index = 0; index < allPokemon.length; index++) {
-        let stats = await fetchPokeStats(index);
-        typeRef.innerHTML += smallCardTypeTemplate(stats);
-    }
-}
-
 function loadMore() {
     renderCount += 20;
     addSmallPokemonCard();
