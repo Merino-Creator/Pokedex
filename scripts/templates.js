@@ -1,7 +1,7 @@
 function smallPokemonCardTemplate(stats) {  // ich habe auf alle daten zugriff.
-    let typesHTML = stats.types.map(typeObj => {
+    let typesHTML = stats.types.map(typeObj => {  // ich erstelle ein HTML, dass eingefügt wird je nach anzahl der typen
         return `
-            <p>${typeObj.type.name}</p>
+            <p class="small-card-types">${typeObj.type.name}</p>
         `;
     }).join("");
     
@@ -14,7 +14,7 @@ function smallPokemonCardTemplate(stats) {  // ich habe auf alle daten zugriff.
             </div>
 
             <div class="small-card-bottom">
-                <div class="small-card-type">
+                <div>
                     ${typesHTML}
                 </div>
                 <img class="small-card-sprite" src="${stats.sprites.front_default}">

@@ -19,6 +19,7 @@
 .small-card-bottom {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
 }
 
@@ -26,9 +27,13 @@
     height: 120px;
 }
 
-.small-card-type {
-    height: 60px;
-    width: 80px;
+.small-card-types {
     border-radius: 12px;
     border: black solid;
+    font-size: 24px;
+    height: 40px;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
