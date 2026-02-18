@@ -1,5 +1,6 @@
 function init() {
     addSmallPokemonCard();
+    usePokeData();
 }
 
 function addSmallPokemonCard() {
