@@ -1,11 +1,11 @@
 let renderCount = 20;
 
 async function init() {
-    await savePokeData(); 
+    await savePokeData();
     addSmallPokemonCard(); 
 }
 
-function addSmallPokemonCard() {
+async function addSmallPokemonCard() {
     let smallCardRef = document.getElementById('mainContainer');
 
     smallCardRef.innerHTML = "";
@@ -13,7 +13,8 @@ function addSmallPokemonCard() {
     let max = Math.min(allPokemon.length, renderCount);
 
     for (let index = 0; index < max; index++) {
-        smallCardRef.innerHTML += smallPokemonCardTemplate(index);
+        let stats = await fetchPokeStats(index);
+        smallCardRef.innerHTML += smallPokemonCardTemplate(stats);
     }
 }
 

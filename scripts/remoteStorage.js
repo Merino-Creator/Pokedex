@@ -1,6 +1,7 @@
 BASE_URL = "https://pokeapi.co/api/v2/pokemon?limit=100&offset=151";
 
 let allPokemon = [];
+let pokeStats = [];
 
 async function fetchPokeData(path="") {
     let response = await fetch(BASE_URL + path + ".json");
@@ -11,6 +12,11 @@ async function fetchPokeData(path="") {
 async function savePokeData() {
     let pokeData = await fetchPokeData();
     allPokemon = pokeData.results;
+}
 
-    console.log(allPokemon);
+async function fetchPokeStats(index) {
+    let url = allPokemon[index].url;
+    let response = await fetch(url);
+    let stats = await response.json();
+    return stats;
 }

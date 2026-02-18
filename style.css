@@ -20,7 +20,7 @@
     align-items: center;
     justify-content: space-between;
     margin: 32px;
-    height: 100%;
+    gap: 32px;
 }
 
 #mainContainer {
