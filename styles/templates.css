@@ -4,9 +4,31 @@
     width: 250px;
     box-sizing: border-box;
     padding: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .small-card-top {
     display: flex;
     justify-content: space-between;
+    width: 100%;
+}
+
+.small-card-bottom {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.small-card-sprite {
+    height: 120px;
+}
+
+#smallCardType {
+    height: 60px;
+    width: 80px;
+    border-radius: 12px;
+    border: black solid;
 }
