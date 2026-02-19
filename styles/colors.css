@@ -1,59 +1,269 @@
 .bg_grass {
-    background-color: green;
+    background: linear-gradient(90deg,
+            #3a6b3a 5%,
+            #a6f0a6 10%,
+            #5cb85c 30%,
+            #7edc7e 50%,
+            #5cb85c 70%,
+            #a6f0a6 80%,
+            #3a6b3a 95%);
+}
+
+.type_grass {
+    background: green;
 }
 
 .bg_fire {
-    background-color: red;
+    background: linear-gradient(90deg,
+            #6b1f1f 5%,
+            #ff9a9a 10%,
+            #cc4444 30%,
+            #e06666 50%,
+            #cc4444 70%,
+            #ff9a9a 80%,
+            #6b1f1f 95%);
+}
+
+.type_fire {
+    background: red;
 }
 
 .bg_water {
-    background-color: blue;
+    background: linear-gradient(90deg,
+            #1f3a6b 5%,
+            #9ac7ff 10%,
+            #4477cc 30%,
+            #6699e0 50%,
+            #4477cc 70%,
+            #9ac7ff 80%,
+            #1f3a6b 95%);
+}
+
+.type_water {
+    background: blue;
 }
 
 .bg_normal {
-    background-color: lightgray;
+    background: linear-gradient(90deg,
+            #7a7a7a 5%,
+            #ffffff 10%,
+            #d6d6d6 30%,
+            #ebebeb 50%,
+            #d6d6d6 70%,
+            #ffffff 80%,
+            #7a7a7a 95%);
+}
+
+.type_normal {
+    background: lightgray;
 }
 
 .bg_electric {
-    background-color: yellow;
+    background: linear-gradient(90deg,
+            #6b6b1f 5%,
+            #fff59a 10%,
+            #e6d244 30%,
+            #f2e066 50%,
+            #e6d244 70%,
+            #fff59a 80%,
+            #6b6b1f 95%);
+}
+
+.type_electric {
+    background: yellow;
 }
 
 .bg_rock {
-    background-color: slategrey;
+    background: linear-gradient(90deg,
+        #3b2214 5%,     
+        #d9a07a 10%,    
+        #a0522d 30%,    
+        #c27a52 50%,    
+        #a0522d 70%,    
+        #d9a07a 80%, 
+        #3b2214 95%);
+}
+
+.type_rock {
+    background: chocolate;
 }
 
 .bg_ground {
-    background-color: brown;
+    background: linear-gradient(90deg,
+            #4a2e1a 5%,
+            #cfa37a 10%,
+            #8b5a2b 30%,
+            #a97442 50%,
+            #8b5a2b 70%,
+            #cfa37a 80%,
+            #4a2e1a 95%);
+}
+
+.type_ground {
+    background: brown;
 }
 
 .bg_fighting {
-    background-color: bisque;
+    background: linear-gradient(90deg,
+            #8b7355 5%,
+            #fff1dc 10%,
+            #e6c7a8 30%,
+            #f2d6ba 50%,
+            #e6c7a8 70%,
+            #fff1dc 80%,
+            #8b7355 95%);
+}
+
+.type_fighting {
+    background: bisque;
 }
 
 .bg_flying {
-    background-color: lightskyblue;
+    background: linear-gradient(90deg,
+            #3a5f7a 5%,
+            #d6f0ff 10%,
+            #87cefa 30%,
+            #a6dcff 50%,
+            #87cefa 70%,
+            #d6f0ff 80%,
+            #3a5f7a 95%);
+}
+
+.type_flying {
+    background: lightskyblue;
 }
 
 .bg_bug {
-    background-color: greenyellow;
+    background: linear-gradient(90deg,
+            #556b2f 5%,
+            #eaff9a 10%,
+            #9acd32 30%,
+            #bdf25a 50%,
+            #9acd32 70%,
+            #eaff9a 80%,
+            #556b2f 95%);
+}
+
+.type_bug {
+    background: yellowgreen;
 }
 
 .bg_poison {
-    background-color: purple;
+    background: linear-gradient(90deg,
+            #4a1f6b 5%,
+            #d09aff 10%,
+            #8a44cc 30%,
+            #a066e0 50%,
+            #8a44cc 70%,
+            #d09aff 80%,
+            #4a1f6b 95%);
 }
 
-.bg_ghost {
-    background-color: black;
+.type_poison {
+    background: purple;
+}
+
+.bg_dark {
+    background: linear-gradient(90deg,
+            rgba(0, 0, 0, 0.5) 5%,
+            rgba(136, 136, 136, 0.5) 10%,
+            rgba(34, 34, 34, 0.5) 30%,
+            rgba(68, 68, 68, 0.5) 50%,
+            rgba(34, 34, 34, 0.5) 70%,
+            rgba(136, 136, 136, 0.5) 80%,
+            rgba(0, 0, 0, 0.5) 95%);
+}
+
+.type_dark {
+    background: rgba(0, 0, 0, 0.5);
 }
 
 .bg_dragon {
-    background-color: gold;
+    background: linear-gradient(90deg,
+            #5a4200 5%,
+            #ffd77a 10%,
+            #b8860b 30%,
+            #d4a437 50%,
+            #b8860b 70%,
+            #ffd77a 80%,
+            #5a4200 95%);
+}
+
+.type_dragon {
+    background: darkgoldenrod;
 }
 
 .bg_ice {
-    background-color: lightblue;
+    background: linear-gradient(90deg,
+            #3a5f7a 5%,
+            #e6f6ff 10%,
+            #add8e6 30%,
+            #c7e6f2 50%,
+            #add8e6 70%,
+            #e6f6ff 80%,
+            #3a5f7a 95%);
+}
+
+.type_ice {
+    background: lightblue;
 }
 
 .bg_psychic {
-    background-color: violet;
+    background: linear-gradient(90deg,
+            #5a2a7a 5%,
+            #e6b3ff 10%,
+            #a060d1 30%,
+            #c087e6 50%,
+            #a060d1 70%,
+            #e6b3ff 80%,
+            #5a2a7a 95%);
+}
+
+.type_psychic {
+    background: violet;
+}
+
+.bg_fairy {
+    background: linear-gradient(90deg,
+            #6b2a4a 5%,
+            #ffb3d1 10%,
+            #cc6699 30%,
+            #e699bb 50%,
+            #cc6699 70%,
+            #ffb3d1 80%,
+            #6b2a4a 95%);
+}
+
+.type_fairy {
+    background: pink;
+}
+
+.bg_steel {
+    background: linear-gradient(90deg,
+            #5a5a5a 5%,
+            #f2f2f2 10%,
+            #c0c0c0 30%,
+            #d9d9d9 50%,
+            #c0c0c0 70%,
+            #f2f2f2 80%,
+            #5a5a5a 95%);
+}
+
+.type_steel {
+    background: silver;
+}
+
+.bg_ghost {
+    background: linear-gradient(90deg,
+            #2e0854 5%,
+            #cfa0ff 10%,
+            #9400d3 30%,
+            #ae4de6 50%,
+            #9400d3 70%,
+            #cfa0ff 80%,
+            #2e0854 95%);
+}
+
+.type_ghost {
+    background: darkviolet;
 }
