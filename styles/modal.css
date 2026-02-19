@@ -15,13 +15,19 @@
 .big-card-top {
     height: 50%;
     width: 100%;
-    background: red;
     display: flex;
 }
 
 .big-card-bottom {
+    background: linear-gradient(90deg,
+    #999 5%,
+    #fff 10%,
+    #ccc 30%,
+    #ddd 50%,
+    #ccc 70%,
+    #fff 80%,
+    #999 95%);
     height: 50%;
     width: 100%;
-    background: blue;
     display: flex;
 }

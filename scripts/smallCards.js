@@ -20,7 +20,7 @@ async function addSmallPokemonCard() {  // ich bearbeite die funktion so, dass d
         let stats = await fetchPokeStats(index);  // hier sorge ich dafür, dass ich jeweils die daten für jedes pokemon hole, da ich hier soweiso durch alle pokemon durchiteriere.
         smallCardRef.insertAdjacentHTML(
             "beforeend",
-            smallPokemonCardTemplate(stats)  // dann übergebe ich den parameter an mein template, damit ich damit nun auf alle daten zugreifen kann
+            smallPokemonCardTemplate(stats, index)  // dann übergebe ich den parameter an mein template, damit ich damit nun auf alle daten zugreifen kann
         );
     }
 }

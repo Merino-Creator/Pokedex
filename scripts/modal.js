@@ -1,9 +1,13 @@
 let dialogRef = document.getElementById('bigPokemonCard');
 
-function openDialog() {
+async function openDialog(index) {
     dialogRef.showModal();
+
+    let stats = await fetchPokeStats(index);
+
+    renderDialog(stats);
 }
 
-function renderDialog() {
-    
+function renderDialog(stats) {
+    dialogRef.innerHTML = dialogTemplate(stats);
 }
