@@ -37,7 +37,11 @@ function dialogTemplate(stats) {
                 <h3>${stats.name.toUpperCase()}</h3>
                 <h3>#${stats.id}</h3>
             </div>
-            <div class="big-card-bottom"></div>
+            <div id="bigCardBottom" class="big-card-bottom"></div>
         </div>
     `;
+}
+
+function bigCardBottomInfoTemplate() {
+    return ``
 }
