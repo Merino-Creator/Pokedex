@@ -8,17 +8,24 @@ async function init() {
 async function addSmallPokemonCard() {  // ich bearbeite die funktion so, dass die neu erworbenen daten verwendet werden
     let smallCardRef = document.getElementById('mainContainer');
 
-    smallCardRef.innerHTML = "";
+    let start = smallCardRef.children.length;   // wie viele karten existieren schon? und danach ist der start punkt
 
     let max = Math.min(allPokemon.length, renderCount);
 
-    for (let index = 0; index < max; index++) {
+    for (let index = start; index < max; index++) {
         let stats = await fetchPokeStats(index);  // hier sorge ich dafür, dass ich jeweils die daten für jedes pokemon hole, da ich hier soweiso durch alle pokemon durchiteriere.
-        smallCardRef.innerHTML += smallPokemonCardTemplate(stats);  // dann übergebe ich den parameter an mein template, damit ich damit nun auf alle daten zugreifen kann
+        smallCardRef.insertAdjacentHTML(
+            "beforeend",
+            smallPokemonCardTemplate(stats)  // dann übergebe ich den parameter an mein template, damit ich damit nun auf alle daten zugreifen kann
+        );
     }
 }
 
 function loadMore() {
-    renderCount += 20;
+    renderCount += 20; 
     addSmallPokemonCard();
+
+    if (renderCount >= allPokemon.length) {
+        showMoreButton.style.display = "none";
+    }
 }
