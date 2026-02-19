@@ -10,7 +10,7 @@ async function addSmallPokemonCard() {  // ich bearbeite die funktion so, dass d
 
     let start = smallCardRef.children.length;   // wie viele karten existieren schon? und danach ist der start punkt
 
-    let max = Math.min(allPokemon.length, renderCount);
+    let max = Math.min(allPokemon.length, renderCount);  // sucht sich die niedrigere zahl der beiden aus, und verwendet diese um die anzahl der geladenen karten zu bestimmen
 
     for (let index = start; index < max; index++) {
         let stats = await fetchPokeStats(index);  // hier sorge ich dafür, dass ich jeweils die daten für jedes pokemon hole, da ich hier soweiso durch alle pokemon durchiteriere.

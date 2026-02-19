@@ -8,7 +8,7 @@ function smallPokemonCardTemplate(stats) {  // ich habe auf alle daten zugriff.
     let mainType = stats.types[0].type.name;
     
     return `
-        <div class="small-pokemon-card bg_${mainType}">
+        <div onclick="openDialog()" class="small-pokemon-card bg_${mainType}">
 
             <div class="small-card-top">
                 <h2>${stats.name.toUpperCase()}</h2>

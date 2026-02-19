@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="styles/assets.css">
     <link rel="stylesheet" href="styles/colors.css">
     <link rel="stylesheet" href="styles/templates.css">
+    <link rel="stylesheet" href="styles/modal.css">
 </head>
 
 <body onload="init()">
@@ -38,10 +39,21 @@
         </div>
     </main>
 
+    <dialog id="bigPokemonCard">
+        <div class="big-pokemon-card">
+            <div class="big-card-top">
+
+            </div>
+            <div class="big-card-bottom">
+
+            </div>
+        </div>
+    </dialog>
+
     <footer>
         <div class="content-wrapper">
             <div class="footer-content">
-                <img onclick="changeMode()" class="footer-img" src="assets/images/lugia.png" alt="">                
+                <img onclick="changeMode()" class="footer-img" src="assets/images/lugia.png" alt="">
             </div>
         </div>
     </footer>
@@ -51,5 +63,6 @@
 <script src="script.js"></script>
 <script src="scripts/templates.js"></script>
 <script src="scripts/remoteStorage.js"></script>
+<script src="scripts/modal.js"></script>
 
 </html>
