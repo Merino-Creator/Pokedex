@@ -9,7 +9,7 @@ async function fetchPokeData() {  // wir ziehen uns die daten der url und lassen
     return responseAsJson;
 }
 
-async function savePokeData() { // ich speichere die daten in einem array. (name und weitere url mit weiten daten)
+async function savePokeData() { // ich speichere die daten in einem array. (name und weitere url mit weiteren daten)
     let pokeData = await fetchPokeData();
     allPokemon = pokeData.results;
 }

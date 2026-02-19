@@ -25,3 +25,16 @@ function smallPokemonCardTemplate(stats) {  // ich habe auf alle daten zugriff.
         </div>
     `;
 }
+
+function dialogTemplate() {
+    return `
+        <div class="big-pokemon-card">
+            <div class="big-card-top">
+                <img src="" alt="">
+                <h3>Name</h3>
+                <h3>ID</h3>
+            </div>
+            <div class="big-card-bottom"></div>
+        </div>
+    `;
+}

@@ -1,4 +1,27 @@
-.big-pokemon-card {
+#bigPokemonCard {
     height: 800px;
     width: 600px;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+.big-pokemon-card {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.big-card-top {
+    height: 50%;
+    width: 100%;
+    background: red;
+    display: flex;
+}
+
+.big-card-bottom {
+    height: 50%;
+    width: 100%;
+    background: blue;
+    display: flex;
 }

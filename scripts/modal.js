@@ -1,5 +1,9 @@
-function openDialog() {
-    let dialogRef = document.getElementById('bigPokemonCard');
+let dialogRef = document.getElementById('bigPokemonCard');
 
+function openDialog() {
     dialogRef.showModal();
+}
+
+function renderDialog() {
+    
 }
