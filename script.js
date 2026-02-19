@@ -22,7 +22,3 @@ function loadMore() {
     renderCount += 20;
     addSmallPokemonCard();
 }
-
-function changeMode() {
-    
-}

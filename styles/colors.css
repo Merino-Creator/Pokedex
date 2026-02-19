@@ -1,59 +1,59 @@
-.grass {
+.bg_grass {
     background-color: green;
 }
 
-.fire {
+.bg_fire {
     background-color: red;
 }
 
-.water {
+.bg_water {
     background-color: blue;
 }
 
-.normal {
+.bg_normal {
     background-color: lightgray;
 }
 
-.electric {
+.bg_electric {
     background-color: yellow;
 }
 
-.rock {
+.bg_rock {
     background-color: slategrey;
 }
 
-.ground {
+.bg_ground {
     background-color: brown;
 }
 
-.fighting {
+.bg_fighting {
     background-color: bisque;
 }
 
-.flying {
+.bg_flying {
     background-color: lightskyblue;
 }
 
-.bug {
+.bg_bug {
     background-color: greenyellow;
 }
 
-.poison {
+.bg_poison {
     background-color: purple;
 }
 
-.ghost {
+.bg_ghost {
     background-color: black;
 }
 
-.dragon {
+.bg_dragon {
     background-color: gold;
 }
 
-.ice {
+.bg_ice {
     background-color: lightblue;
 }
 
-.psychic {
+.bg_psychic {
     background-color: violet;
 }
