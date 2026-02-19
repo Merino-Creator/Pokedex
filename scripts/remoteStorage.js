@@ -20,3 +20,8 @@ async function fetchPokeStats(index) {  // ich ziehe die daten der url von den d
     let stats = await response.json();  // ich gebe die daten wieder. 
     return stats;
 }
+
+async function fetchPokemonByIdFromAll(id) {
+    let index = allPokemon.findIndex(p => p.url.includes("/" + id + "/"));
+    return await fetchPokeStats(index);
+}

@@ -26,4 +26,28 @@ function closeDialog() {
 
 function renderDialog(stats) {
     dialogRef.innerHTML = dialogTemplate(stats);
+
+    showTab("about", stats.id);
+}
+
+async function showTab(tabName, id) {
+    let stats = await fetchPokemonByIdFromAll(id);
+
+    let contentRef = document.getElementById("tabContent");
+
+    if (tabName === "about") {
+        contentRef.innerHTML = getAboutHTML(stats);
+    }
+
+    if (tabName === "base") {
+        contentRef.innerHTML = getBaseStatsHTML(stats);
+    }
+
+    if (tabName === "moves") {
+        contentRef.innerHTML = getMovesHTML(stats);
+    }
+
+    if (tabName === "abilities") {
+        contentRef.innerHTML = getAbilitiesHTML(stats);
+    }
 }

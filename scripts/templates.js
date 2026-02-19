@@ -32,16 +32,60 @@ function dialogTemplate(stats) {
 
     return `
         <div class="big-pokemon-card">
+
             <div class="big-card-top bg_${mainType}">
-                <img src="${stats.sprites.other["official-artwork"].front_default}">
-                <h3>${stats.name.toUpperCase()}</h3>
-                <h3>#${stats.id}</h3>
+                <img class="big-card-img" src="${stats.sprites.other["official-artwork"].front_default}">
+                <div class="big-card-top-text">
+                    <h3>${stats.name.toUpperCase()}</h3>
+                    <h3>#${stats.id}</h3>
+                </div>
             </div>
-            <div id="bigCardBottom" class="big-card-bottom"></div>
+
+            <div id="bigCardBottom" class="big-card-bottom">
+                <div class="tab-bar">
+                    <button class="tab-btn" onclick="showTab('about', ${stats.id})">About</button>
+                    <button class="tab-btn" onclick="showTab('base', ${stats.id})">Base Stats</button>
+                    <button class="tab-btn" onclick="showTab('moves', ${stats.id})">Moves</button>
+                    <button class="tab-btn" onclick="showTab('abilities', ${stats.id})">Abilities</button>
+                </div>
+                <div id="tabContent" class="tab-content"></div>
+            </div>
         </div>
     `;
 }
 
-function bigCardBottomInfoTemplate() {
-    return ``
+function getAboutHTML(stats) {
+
+    return `
+        <p>Height: ${stats.height}</p>
+        <p>Weight: ${stats.weight}</p>
+        <p>Base Experience: ${stats.base_experience}</p>
+    `;
+
+}
+
+function getBaseStatsHTML(stats) {
+
+    return stats.stats.map(stat => `
+        <p>
+            ${stat.stat.name}: ${stat.base_stat}
+        </p>
+    `).join("");
+
+}
+
+function getMovesHTML(stats) {
+
+    return stats.moves.slice(0, 5).map(move => `
+        <p>${move.move.name}</p>
+    `).join("");
+
+}
+
+function getAbilitiesHTML(stats) {
+
+    return stats.abilities.map(ability => `
+        <p>${ability.ability.name}</p>
+    `).join("");
+
 }
