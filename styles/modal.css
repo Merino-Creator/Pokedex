@@ -12,6 +12,7 @@
     flex-direction: column;
 }
 
+/* top part */
 .big-card-top {
     height: 50%;
     width: 100%;
@@ -31,6 +32,7 @@
     justify-content: space-around;
 }
 
+/* bottom part*/
 .big-card-bottom {
     background: linear-gradient(90deg,
     #999 5%,
@@ -64,14 +66,6 @@
     text-decoration: underline;
 }
 
-.tab-content {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    box-sizing: border-box;
-    padding: 24px 48px;
-}
-
 .big-card-bottom-btn-box {
     width: 100%;
     display: flex;
@@ -89,4 +83,32 @@
 .big-card-bottom-btn:hover {
     cursor: pointer;
     box-shadow: 1px 1px 1px 1px;
+}
+
+/* tabs contents */
+.tab-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    box-sizing: border-box;
+    padding: 24px 48px;
+}
+
+/* about tab */
+.about-tab-box {
+    display: flex;
+    justify-content: space-around;
+}
+
+.about-tab-box-left {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.about-tab-box-right {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }

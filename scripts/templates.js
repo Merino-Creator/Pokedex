@@ -60,9 +60,18 @@ function dialogTemplate(stats) {
 
 function getAboutHTML(stats) {  // wenn auf einen der tabs gedrückt wird löst die function showTab() aus, die das entsprechenden template/HTML reinschmeisst
     return `
-        <p>Height: ${stats.height}</p>
-        <p>Weight: ${stats.weight}</p>
-        <p>Base Experience: ${stats.base_experience}</p>
+        <div class="about-tab-box">
+            <div class="about-tab-box-left">
+                <b>Height:</b>
+                <b>Weight:</b>
+                <b>Base Experience:</b>
+            </div>
+            <div class="about-tab-box-right">
+                <p>${stats.height}</p>
+                <p>${stats.weight}</p>
+                <p>${stats.base_experience}</p>
+            </div>
+        </div>
     `;
 }
 
