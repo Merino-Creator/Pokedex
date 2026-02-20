@@ -43,10 +43,10 @@ function dialogTemplate(stats) {
 
             <div id="bigCardBottom" class="big-card-bottom">
                 <div class="tab-bar">
-                    <button class="tab-btn" onclick="showTab('about', ${stats.id})">About</button>
-                    <button class="tab-btn" onclick="showTab('base', ${stats.id})">Base Stats</button>
-                    <button class="tab-btn" onclick="showTab('moves', ${stats.id})">Moves</button>
-                    <button class="tab-btn" onclick="showTab('abilities', ${stats.id})">Abilities</button>
+                    <button class="tab-btn" onclick="addTabTemplate('about', ${stats.id}), highlightTab('about', ${stats.id})">About</button>
+                    <button class="tab-btn" onclick="addTabTemplate('base', ${stats.id}), highlightTab('base', ${stats.id})">Base Stats</button>
+                    <button class="tab-btn" onclick="addTabTemplate('moves', ${stats.id}), highlightTab('moves', ${stats.id})">Moves</button>
+                    <button class="tab-btn" onclick="addTabTemplate('abilities', ${stats.id}), highlightTab('abilities', ${stats.id})">Abilities</button>
                 </div>
                 <div id="tabContent" class="tab-content"></div>
                 <div class="big-card-bottom-btn-box">

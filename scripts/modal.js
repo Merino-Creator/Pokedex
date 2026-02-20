@@ -25,10 +25,10 @@ function closeDialog() {
 function renderDialog(stats) {
     dialogRef.innerHTML = dialogTemplate(stats);
 
-    showTab("about", stats.id);  // lässt standradmäßig den about tab beim öffnen anzeigen
+    highlightTab("about", stats.id);  // lässt standradmäßig den about tab beim öffnen anzeigen
 }
 
-async function showTab(tabName, id) {  // wir übergeben den namen des entsprechenden tabs und die id damit klar ist auf welches pokemon zugegriffen werden soll
+async function addTabTemplate(tabName, id) {  // wir übergeben den namen des entsprechenden tabs und die id damit klar ist auf welches pokemon zugegriffen werden soll
     let stats = await fetchPokemonByIdFromAll(id);  // wir holen uns die daten der urls die wir brauchen
 
     let contentRef = document.getElementById("tabContent");
@@ -48,6 +48,17 @@ async function showTab(tabName, id) {  // wir übergeben den namen des entsprech
     if (tabName === "abilities") {
         contentRef.innerHTML = getAbilitiesHTML(stats);
     }
+}
+
+async function highlightTab(tabName, id) {
+    document.querySelectorAll('.tab-btn').forEach(btn => {  // wir suchen uns alle elemente mit der klasse .tab-btn heraus iterieren über alle elemente auf die das zutrifft
+        btn.classList.remove('active');  // und geben jeder die klasse active und entfernen sie zugleich 
+    });
+
+    let activeBtn = document.querySelector(`.tab-btn[onclick*="'${tabName}',"]`);  // wir suchen die elemente raus die die entsprechenden suchkriterien erfüllen und speichern sie in der variable
+    if (activeBtn) activeBtn.classList.add('active');  // wenn tatsächlich etwas gefunden wurde, wird diesem element die klasse active hinzugefügt
+
+    await addTabTemplate(tabName, id);
 }
 
 function showNextCard() {
