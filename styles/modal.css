@@ -112,3 +112,47 @@
     flex-direction: column;
     gap: 12px;
 }
+
+/* stats tab */
+.stats-tab-box {
+    display: flex;
+    justify-content: space-around;
+}
+
+.stats-tab-box-left {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.stats-tab-box-right {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* moves tab */
+.moves-tab-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.moves-tab-box p {
+    margin: 0;
+}
+
+/* abilities tab */
+.abilities-tab-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.abilities-tab-box p {
+    margin: 0;
+}

@@ -76,23 +76,40 @@ function getAboutHTML(stats) {  // wenn auf einen der tabs gedrückt wird löst 
 }
 
 function getBaseStatsHTML(stats) {
-    return stats.stats.map(stat => `
-        <p>
-            ${stat.stat.name}: ${stat.base_stat}
-        </p>
-    `).join("");
+    return `
+        <div class="stats-tab-box">
+            <div class="stats-tab-box-left">
+                ${stats.stats.map(stat => `
+                    <b>${stat.stat.name}:</b>
+                `).join("")}
+            </div>
+            <div class="stats-tab-box-right">
+                ${stats.stats.map(stat => `
+                    <p>${stat.base_stat}</p>
+                `).join("")}
+            </div>
+        </div>
+    `;
 }
 
-function getMovesHTML(stats) {
-    return stats.moves.slice(0, 5).map(move => `
-        <p>${move.move.name}</p>
-    `).join("");
+function getMovesHTML(stats) {  // durch slice nehmen wir nur die ersten 5 moves. wir schneiden uns sozusagen die moves von position 1 bis 4 aus dem array. denn array beginnt bei 0. bis 5 also ist 4 der letzte.
+    return `
+        <div class="moves-tab-box">
+            ${stats.moves.slice(0, 5).map(move => `
+                <b>${move.move.name}</b>
+            `).join("")}
+        </div>
+    `;
 }
 
 function getAbilitiesHTML(stats) {
-    return stats.abilities.map(ability => `
-        <p>${ability.ability.name}</p>
-    `).join("");
+    return `
+        <div class="abilities-tab-box">
+            ${stats.abilities.map(ability => `
+                <b>${ability.ability.name}</b>
+            `).join("")}
+        </div>
+    `;
 }
 
 function spinnerTemplate() {
