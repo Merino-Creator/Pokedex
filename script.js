@@ -9,5 +9,5 @@ function showSpinner() {
 }
 
 function hideSpinner() {
-    document.querySelector(".spinner-container")?.remove();
+    document.getElementById('spinner').remove();
 }

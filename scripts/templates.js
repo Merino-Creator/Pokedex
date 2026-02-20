@@ -84,7 +84,7 @@ function getAbilitiesHTML(stats) {
 
 function spinnerTemplate() {
     return `
-        <div class="spinner-container">
+        <div id="spinner" class="spinner-container">
             <img class="spinner-img" src="assets/images/pokeball-logo.png">
         </div>
     `;
