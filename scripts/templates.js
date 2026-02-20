@@ -54,38 +54,30 @@ function dialogTemplate(stats) {
     `;
 }
 
-function getAboutHTML(stats) {
-
+function getAboutHTML(stats) {  // wenn auf einen der tabs gedrückt wird löst die function showTab() aus, die das entsprechenden template/HTML reinschmeisst
     return `
         <p>Height: ${stats.height}</p>
         <p>Weight: ${stats.weight}</p>
         <p>Base Experience: ${stats.base_experience}</p>
     `;
-
 }
 
 function getBaseStatsHTML(stats) {
-
     return stats.stats.map(stat => `
         <p>
             ${stat.stat.name}: ${stat.base_stat}
         </p>
     `).join("");
-
 }
 
 function getMovesHTML(stats) {
-
     return stats.moves.slice(0, 5).map(move => `
         <p>${move.move.name}</p>
     `).join("");
-
 }
 
 function getAbilitiesHTML(stats) {
-
     return stats.abilities.map(ability => `
         <p>${ability.ability.name}</p>
     `).join("");
-
 }

@@ -22,6 +22,6 @@ async function fetchPokeStats(index) {  // ich ziehe die daten der url von den d
 }
 
 async function fetchPokemonByIdFromAll(id) {
-    let index = allPokemon.findIndex(p => p.url.includes("/" + id + "/"));
-    return await fetchPokeStats(index);
+    let index = allPokemon.findIndex(poke => poke.url.includes("/" + id + "/"));  // wir greifen auf genau die unterdaten in den urls zu die wir brauchen
+    return await fetchPokeStats(index);  // der übergebene index hier bezieht sich auf die daten am ende des paths
 }
