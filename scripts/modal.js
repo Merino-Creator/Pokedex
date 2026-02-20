@@ -1,7 +1,6 @@
 let dialogRef = document.getElementById('bigPokemonCard');
 
 async function openDialog(index) {
-
     document.body.style.overflow = "hidden";
 
     dialogRef.showModal();
@@ -12,7 +11,6 @@ async function openDialog(index) {
 }
 
 function dialogClick(event) {
-
     if (event.target === dialogRef) {
         closeDialog();
     }
@@ -50,4 +48,12 @@ async function showTab(tabName, id) {  // wir übergeben den namen des entsprech
     if (tabName === "abilities") {
         contentRef.innerHTML = getAbilitiesHTML(stats);
     }
+}
+
+function showNextCard() {
+
+}
+
+function showPreviousCard() {
+    
 }

@@ -49,6 +49,10 @@ function dialogTemplate(stats) {
                     <button class="tab-btn" onclick="showTab('abilities', ${stats.id})">Abilities</button>
                 </div>
                 <div id="tabContent" class="tab-content"></div>
+                <div class="big-card-bottom-btn-box">
+                    <button onclick="showPreviousCard()" id="nextButton" class="big-card-bottom-btn">Previous</button>
+                    <button onclick="showNextCard()" id="prevButton" class="big-card-bottom-btn">Next</button>
+                </div>
             </div>
         </div>
     `;

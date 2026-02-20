@@ -69,5 +69,24 @@
     flex-direction: column;
     flex: 1;
     box-sizing: border-box;
-    padding: 48px;
+    padding: 24px 48px;
+}
+
+.big-card-bottom-btn-box {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 24px 48px;
+}
+
+.big-card-bottom-btn {
+    height: 40px;
+    width: 80px;
+    border-radius: 50%;
+}
+
+.big-card-bottom-btn:hover {
+    cursor: pointer;
+    box-shadow: 1px 1px 1px 1px;
 }
