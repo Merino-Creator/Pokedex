@@ -17,10 +17,14 @@ async function searchPokemon(query) {
         return;
     }  // bis hier wird der input geprüft
 
-    let filteredPokemon = allPokemon  // ab hier wird der filter erzeugt
-
-        .map((poke, index) => ({ ...poke, index }))  // .map erstellt ein neues array, dabei werden poke und index festgelegt als key value paar. ...poke kopiert alle eigenschaften von ursprünglichen objekt und wir fügen einen index hinzu
-        .filter(poke => poke.name.toLowerCase().includes(query));  // nach map sieht es aus wie vorher, bloß das jedes objekt einen index erhalten hat. den wir brauchen den index für die fetchPokeStats() function
+    let filteredPokemon = allPokemon  //  map erweitert jedes Objekt um den originalen Index, damit auch nachdem ein neues array mit den daten erstellt wurde, jedes element weiterhin seinen originalen index besitzt
+        .map((poke, index) => ({
+            ...poke,
+            originalIndex: index
+        }))  // ...poke kopiert alle eiegnschaften der objekte und der neue index wird dem hinzugefügt 
+        .filter(poke =>
+            poke.name.toLowerCase().includes(query)   // jetzt können wir nach dem namen suchen und auch wenn nur ein pokemon auf der seite angezeigt wird. behält es seinen original index um die richtige karte zu öffnen
+        );
 
     renderFilteredPokemon(filteredPokemon);
 }  // filter erstellt dann ein neues array, das nur die elemente enthält, für die die bedingung true ist! also poke.name.lowercase namen des arrays werden abgerufen .includes(query) überprüft ob unsere eingegebenen bucstaben mit einem namen übereinstimmen.
@@ -30,7 +34,7 @@ async function renderFilteredPokemon(filteredArray) {  // eine seperate function
     searchRef.innerHTML = "";
 
     for (let poke of filteredArray) {  // wir nehmen poke, das element, welches wir oben per map erstellt haben aus filteredPokemon (poke ist hierbei kein index)
-        let stats = await fetchPokeStats(poke.index);  // checken ob die parameter mit den gefetchten daten übereinstimmen
-        searchRef.insertAdjacentHTML("beforeend", smallPokemonCardTemplate(stats));  // fügen das entsprechende gefilterte pokemon in das ende des containers ein.
+        let stats = await fetchPokeStats(poke.originalIndex);  // checken ob die parameter mit den gefetchten daten übereinstimmen
+        searchRef.insertAdjacentHTML("beforeend", smallPokemonCardTemplate(stats, poke.originalIndex));  // fügen das entsprechende gefilterte pokemon in das ende des containers ein.
     }
 }
