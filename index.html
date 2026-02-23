@@ -25,7 +25,13 @@
                     <img class="header-img" src="assets/images/pokeball-logo.png" alt="small pokeball">
                     <h1 class="strokeme">POKEDEX</h1>
                 </div>
-                <input type="search" name="pokeSearch" id="pokeSearch" min="3" max="15" placeholder="search..." oninput="searchPokemon(this.value)">
+                <div class="field">
+                    <input required type="search" name="pokeSearch" id="pokeSearch" minlength="3" maxlength="15" placeholder="search ..."
+                        oninput="searchPokemon(this.value)">
+                    <div class="tooltip">
+                        min. 3 letters
+                    </div>
+                </div>
             </div>
         </div>
     </header>

@@ -8,6 +8,8 @@
     border-radius: 12px;
     border: none;
     box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.801);
+    box-sizing: border-box;
+    padding: 0 8px;
 }
 
 #showMoreButton {
@@ -25,4 +27,35 @@
 
 .footer-img:hover {
     cursor: pointer;
+}
+
+.field {
+  position: relative;
+}
+
+.tooltip {
+  position: absolute;
+  left: 12px;
+  top: 38px;
+  background: #ff4d4f;
+  color: white;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 6px;
+
+  opacity: 0;
+  transform: translateY(-10px) scale(0.95);
+  transform-origin: left bottom;
+  transition: all 0.25s ease;
+
+  pointer-events: none;
+}
+
+.field input:invalid:not(:placeholder-shown) ~ .tooltip {  /* überprüft ob im input des divs .field der input invalid UND not empty ist. mit ~ .tooltip wird ein element auf der selben ebene mit dem selben parent ausgesucht welches bei erfüllen der bedingungen in aktion tritt. */
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.field input:invalid:not(:placeholder-shown) {
+  border-color: #ff4d4f;
 }
