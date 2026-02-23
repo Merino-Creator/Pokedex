@@ -4,7 +4,7 @@ async function searchPokemon(query) {
 
     query = query.toLowerCase().trim();  // query stellt unsere eingabe dar. kleinbuchstaben sind in ordnung
 
-    if (query === "") {   // falls sich nicht in der eingabe befindet
+    if (query === "") {   // falls sich nichts in der eingabe befindet
         searchRef.innerHTML = "";
         showMoreRef.style.display = "block";  // lassen wir den load more block anzeigen. das passiert erst wenn was eingegeben und wieder glöscht wurde, denn standardmäßig wird er ja geladen
         await addSmallPokemonCard();  // und laden alle karten wieder rein
@@ -12,7 +12,7 @@ async function searchPokemon(query) {
     }
 
     if (query.length < 3) {  // wenn die eingabe weniger als 3 buchstaben enthält, wird nichts gesucht
-        searchRef.innerHTML = "";
+        searchRef.innerHTML = "<p> please be more specific </p>";  // message wenn nicht genug buchstaben eingegeben wurden
         showMoreRef.style.display = "none";  // der show more button wird entfernt
         return;
     }  // bis hier wird der input geprüft
@@ -25,6 +25,12 @@ async function searchPokemon(query) {
         .filter(poke =>
             poke.name.toLowerCase().includes(query)   // jetzt können wir nach dem namen suchen und auch wenn nur ein pokemon auf der seite angezeigt wird. behält es seinen original index um die richtige karte zu öffnen
         );
+
+    if (filteredPokemon.length === 0) {  // prüft ob die eingabe mit einem namen der gefilterten pokemon übereinstimmt. wenn nicht dann die nachricht.
+        searchRef.innerHTML = "<p>couldn't find a Pokémon with that name</p>";
+        showMoreRef.style.display = "none";
+        return;
+    }
 
     renderFilteredPokemon(filteredPokemon);
 }  // filter erstellt dann ein neues array, das nur die elemente enthält, für die die bedingung true ist! also poke.name.lowercase namen des arrays werden abgerufen .includes(query) überprüft ob unsere eingegebenen bucstaben mit einem namen übereinstimmen.
