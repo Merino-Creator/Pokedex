@@ -1,12 +1,12 @@
 let dialogRef = document.getElementById('bigPokemonCard');
+let current = 1;
+let max = 100;
+let currentIndex = 0;
 
 async function openDialog(index) {
     document.body.style.overflow = "hidden";
-
     dialogRef.showModal();
-
     let stats = await fetchPokeStats(index);  // reihenfolge spielt eine rolle, da wir hier erst die daten holen befor wir etwas anzeigen lassen können.
-
     renderDialog(stats);
 }
 
@@ -18,19 +18,16 @@ function dialogClick(event) {
 
 function closeDialog() {
     dialogRef.close();
-
     document.body.style.overflow = "auto";
 }
 
 function renderDialog(stats) {
     dialogRef.innerHTML = dialogTemplate(stats);
-
     highlightTab("about", stats.id);  // lässt standradmäßig den about tab beim öffnen anzeigen
 }
 
 async function addTabTemplate(tabName, id) {  // wir übergeben den namen des entsprechenden tabs und die id damit klar ist auf welches pokemon zugegriffen werden soll
     let stats = await fetchPokemonByIdFromAll(id);  // wir holen uns die daten der urls die wir brauchen
-
     let contentRef = document.getElementById("tabContent");
 
     if (tabName === "about") {
@@ -59,4 +56,12 @@ async function highlightTab(tabName, id) {
     if (activeBtn) activeBtn.classList.add('active');  // wenn tatsächlich etwas gefunden wurde, wird diesem element die klasse active hinzugefügt
 
     await addTabTemplate(tabName, id);
+}
+
+function showNextCard() {
+
+}
+
+function showPreviousCard() {
+    
 }
