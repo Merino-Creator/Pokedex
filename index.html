@@ -26,8 +26,8 @@
                     <h1 class="strokeme">POKEDEX</h1>
                 </div>
                 <div class="field">
-                    <input required type="search" name="pokeSearch" id="pokeSearch" minlength="3" maxlength="15" placeholder="search ..."
-                        oninput="searchPokemon(this.value)">
+                    <input required type="search" name="pokeSearch" id="pokeSearch" minlength="3" maxlength="15"
+                        placeholder="search ..." oninput="searchPokemon(this.value)">
                     <div class="tooltip">
                         min. 3 letters
                     </div>
@@ -44,6 +44,10 @@
             </div>
         </div>
     </main>
+
+    <div id="spinner" class="spinner hidden">
+        <img src="assets/images/pokeball-logo.png">
+    </div>
 
     <dialog onclick="dialogClick(event)" id="bigPokemonCard"></dialog>
 
