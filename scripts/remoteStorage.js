@@ -18,7 +18,7 @@ async function fetchPokeStats(index) {  // ich ziehe die daten der url von den d
     let url = allPokemon[index].url;
     let response = await fetch(url);
     let stats = await response.json();  // ich gebe die daten wieder. 
-    pokeStats[index] = stats;
+    pokeStats[index] = stats;  // spiechere die gefetchten daten in neuem array
     return stats;
 }
 

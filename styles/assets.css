@@ -61,21 +61,28 @@
     cursor: pointer;
 }
 
-.spinner-container {
-    width: 100%;
+.spinner {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 40px 0;
+    height: 100vh;
+    margin: 20px 0;
 }
 
-.spinner-img {
-    width: 80px;
+.spinner img {
+    width: 100px;
     animation: spin 1s linear infinite;
 }
 
 @keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
     to {
         transform: rotate(360deg);
     }
+}
+
+.hidden {
+    display: none;
 }
