@@ -14,6 +14,10 @@
         height: 160px;
     }
 
+    .main-content {
+        margin: 16px;
+    }
+
     #pokeSearch {
         width: 100%;
     }
@@ -25,6 +29,34 @@
 
     .big-card-img {
         height: 240px;
+    }
+
+    .tab-bar {
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
+
+    .tab-content {
+        padding: 0 18px;
+
+    }
+
+    .stats-tab-box-left {
+        gap: 6px;
+    }
+
+    .stats-tab-box-right {
+        gap: 6px;
+    }
+
+    .big-card-bottom-btn-box {
+        padding: 4px 18px;
+    }
+
+    .big-card-bottom-btn {
+        height: 40px;
+        width: 60px;
+        font-size: 12px;
     }
 }
 
@@ -39,12 +71,12 @@
     }
 
     .tab-bar {
-        margin-top: 12px;
-        margin-bottom: 12px;
+        margin-top: 6px;
+        margin-bottom: 6px;
     }
 
     .tab-btn {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .tab-content {
@@ -52,6 +84,12 @@
     }
 
     .big-card-bottom-btn-box {
-        padding: 6px 12px;
+        padding: 6px 6px;
+    }
+
+    .big-card-bottom-btn {
+        height: 20px;
+        width: 60px;
+        font-size: 12px;
     }
 }
