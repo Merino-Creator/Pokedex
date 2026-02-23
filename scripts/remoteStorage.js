@@ -1,4 +1,4 @@
-BASE_URL = "https://pokeapi.co/api/v2/pokemon?limit=100&offset=151";
+BASE_URL = "https://pokeapi.co/api/v2/pokemon?limit=251&offset=0";
 
 let allPokemon = [];
 let pokeStats = [];
