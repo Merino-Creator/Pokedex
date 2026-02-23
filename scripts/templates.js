@@ -41,7 +41,7 @@ function dialogTemplate(stats) {
                 </div>
             </div>
 
-            <div id="bigCardBottom" class="big-card-bottom">
+            <div id="bigCardBottom" class="big-card-bottom ${isGold ? 'gold' : 'silver'}">
                 <div class="tab-bar">
                     <button class="tab-btn" onclick="addTabTemplate('about', ${stats.id}), highlightTab('about', ${stats.id})">About</button>
                     <button class="tab-btn" onclick="addTabTemplate('base', ${stats.id}), highlightTab('base', ${stats.id})">Base Stats</button>

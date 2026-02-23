@@ -33,7 +33,7 @@
 }
 
 /* bottom part*/
-.big-card-bottom {
+.big-card-bottom.silver {
     background: linear-gradient(90deg,
     #999 5%,
     #fff 10%,
@@ -42,6 +42,21 @@
     #ccc 70%,
     #fff 80%,
     #999 95%);
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.big-card-bottom.gold {
+    background: linear-gradient(90deg,
+    #b8860b 5%,
+    #ffec8b 10%,
+    #daa520 30%,
+    #ffd700 50%,
+    #daa520 70%,
+    #ffec8b 80%,
+    #b8860b 95%);
     height: 50%;
     width: 100%;
     display: flex;
