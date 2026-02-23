@@ -1,5 +1,5 @@
-function smallPokemonCardTemplate(stats, originalIndex) {  // ich habe auf alle daten zugriff.
-    let typesHTML = stats.types.map(typeObj => {  // ich erstelle ein HTML, dass eingefügt wird je nach anzahl der typen
+function smallPokemonCardTemplate(stats, originalIndex) {
+    let typesHTML = stats.types.map(typeObj => {
         return `
             <p class="small-card-types type_${typeObj.type.name}">${typeObj.type.name}</p>
         `;
@@ -58,7 +58,7 @@ function dialogTemplate(stats) {
     `;
 }
 
-function getAboutHTML(stats) {  // wenn auf einen der tabs gedrückt wird löst die function showTab() aus, die das entsprechenden template/HTML reinschmeisst
+function getAboutHTML(stats) {
     return `
         <div class="about-tab-box">
             <div class="about-tab-box-left">
@@ -92,7 +92,7 @@ function getBaseStatsHTML(stats) {
     `;
 }
 
-function getMovesHTML(stats) {  // durch slice nehmen wir nur die ersten 5 moves. wir schneiden uns sozusagen die moves von position 1 bis 4 aus dem array. denn array beginnt bei 0. bis 5 also ist 4 der letzte.
+function getMovesHTML(stats) {
     return `
         <div class="moves-tab-box">
             ${stats.moves.slice(0, 5).map(move => `

@@ -10,29 +10,29 @@ async function loadMore() {
     }
 }
 
-async function addSmallPokemonCard() {  // ich bearbeite die funktion so, dass die neu erworbenen daten verwendet werden
-    let start = smallCardRef.children.length;   // wie viele karten existieren schon? und danach ist der start punkt  
-    let max = Math.min(allPokemon.length, renderCount);  // sucht sich die niedrigere zahl der beiden aus, und verwendet diese um die anzahl der geladenen karten zu bestimmen
+async function addSmallPokemonCard() {
+    let start = smallCardRef.children.length;
+    let max = Math.min(allPokemon.length, renderCount);
 
     showSpinner();
     let startTime = Date.now();
 
     for (let index = start; index < max; index++) {
         if (!pokeStats[index]) {
-            await fetchPokeStats(index);  // hier sorge ich dafür, dass die daten gefetched werden, fals sie nicht da sein sollten.
+            await fetchPokeStats(index);
         }   
     }
 
     const elapsed = Date.now() - startTime;
     const remaining = Math.max(1000 - elapsed, 0);
-    await wait(remaining);  // ich lasse mir ausrechnen wie lange der spinner drehen soll. aber minimum 1 sekunde.
+    await wait(remaining);
 
     hideSpinner();
 
-    for (let index = start; index < max; index++) {  // ich füge erst die templates ein, nachdem ich den spinner entfernt habe
+    for (let index = start; index < max; index++) {
         smallCardRef.insertAdjacentHTML(
             "beforeend",
-            smallPokemonCardTemplate(pokeStats[index], index)  // dann übergebe ich den parameter an mein template, damit ich damit nun auf alle daten zugreifen kann
+            smallPokemonCardTemplate(pokeStats[index], index)
         );
     }
 }

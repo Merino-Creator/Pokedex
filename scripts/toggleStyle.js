@@ -27,8 +27,8 @@ function toggleMode(element) {
     cardBottomRef.classList.toggle('gold');
     cardBottomRef.classList.toggle('silver');
 
-    document.body.style.background = isGold ? silverGradient : goldGradient;  // bedingung ? wennTrue : wennFalse. kurze if else form
-    isGold = !isGold;  // hier der wechsel. der wert wird zu true wenn wir clicken und wieder zu false wenn wir nochmal clicken usw usw.
+    document.body.style.background = isGold ? silverGradient : goldGradient;
+    isGold = !isGold;
 
     element.src = element.src.includes('lugia.png')
         ? 'assets/images/ho-oh.png'

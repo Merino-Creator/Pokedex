@@ -39,7 +39,6 @@
 }
 
 .field input:invalid:not(:placeholder-shown)~.tooltip {
-    /* überprüft ob im input des divs .field der input invalid UND not empty ist. mit ~ .tooltip wird ein element auf der selben ebene mit dem selben parent ausgesucht welches bei erfüllen der bedingungen in aktion tritt. */
     opacity: 1;
     transform: translateY(0) scale(1);
 }
