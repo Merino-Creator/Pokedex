@@ -22,8 +22,8 @@ let isGold = false;
 let shimmerActive = false;
 
 function toggleMode(element) {
-    document.body.style.background = isGold ? silverGradient : goldGradient;
-    isGold = !isGold;
+    document.body.style.background = isGold ? silverGradient : goldGradient;  // bedingung ? wennTrue : wennFalse. kurze if else form
+    isGold = !isGold;  // hier der wechsel. der wert wird zu true wenn wir clicken und wieder zu false wenn wir nochmal clicken usw usw.
 
     element.src = element.src.includes('lugia.png')
         ? 'assets/images/ho-oh.png'

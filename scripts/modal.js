@@ -60,11 +60,3 @@ async function highlightTab(tabName, id) {
 
     await addTabTemplate(tabName, id);
 }
-
-function showNextCard() {
-
-}
-
-function showPreviousCard() {
-    
-}

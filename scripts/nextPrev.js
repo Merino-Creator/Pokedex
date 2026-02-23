@@ -1,0 +1,7 @@
+function showNextCard() {
+
+}
+
+function showPreviousCard() {
+    
+}
