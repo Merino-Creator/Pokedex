@@ -18,7 +18,19 @@ body {
     scroll-behavior: smooth;
 }
 
+.header-content-wrapper {
+    display: flex;
+    max-width: 1440px;
+    width: 100%;
+}
+
 .content-wrapper {
+    display: flex;
+    max-width: 1440px;
+    width: 100%;
+}
+
+.footer-content-wrapper {
     display: flex;
     max-width: 1440px;
     width: 100%;
