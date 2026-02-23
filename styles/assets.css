@@ -2,6 +2,10 @@
     height: 40px;
 }
 
+.header-img:hover {
+    cursor: pointer;
+}
+
 #pokeSearch {
     height: 32px;
     width: 360px;
