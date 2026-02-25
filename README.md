@@ -1,1 +1,1 @@
-project about using APIs
+project about implementing and using APIs.
