@@ -1,10 +1,10 @@
-BASE_URL = "https://pokeapi.co/api/v2/pokemon?limit=251&offset=0";
+genOne_URL = "https://pokeapi.co/api/v2/pokemon?limit=151&offset=0";
 
 let allPokemon = [];
 let pokeStats = [];
 
 async function fetchPokeData() {
-    let response = await fetch(BASE_URL);
+    let response = await fetch(genOne_URL);
     let responseAsJson = await response.json();
     return responseAsJson;
 }
