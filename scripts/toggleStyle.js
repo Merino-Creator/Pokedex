@@ -12,7 +12,7 @@ const blueGradient = `
 let isBlue = false;
 
 function toggleGenOne(element) {
-    document.body.style.background = isBlue ? redGradient : blueGradient;
+    background.style.background = isBlue ? blueGradient : redGradient;
     isBlue = !isBlue;
 
     element.src = element.src.includes('blastoise.png')
@@ -48,7 +48,7 @@ let isGold = false;
 let shimmerActive = false;
 
 function toggleGenTwo(element) {
-    document.body.style.background = isGold ? silverGradient : goldGradient;
+    background.style.background = isGold ? silverGradient : goldGradient;
     isGold = !isGold;
 
     element.src = element.src.includes('lugia.png')
@@ -87,7 +87,7 @@ const rubyGradient = `
 let isRuby = false;
 
 function toggleGenThree(element) {
-    document.body.style.background = isRuby ? sapphireGradient : rubyGradient;
+    background.style.background = isRuby ? sapphireGradient : rubyGradient;
     isRuby = !isRuby;
 
     element.src = element.src.includes('kyogre.png')
@@ -120,7 +120,7 @@ const pearlGradient = `
 let isPearl = false;
 
 function toggleGenFour(element) {
-    document.body.style.background = isPearl ? diamondGradient : pearlGradient;
+    background.style.background = isPearl ? diamondGradient : pearlGradient;
     isPearl = !isPearl;
 
     element.src = element.src.includes('dialga.png')

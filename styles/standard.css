@@ -3,19 +3,17 @@ body {
     margin: 0;
     height: 100vh;
     width: 100%;
-    background: linear-gradient(90deg,
-    #999 5%,
-    #fff 10%,
-    #ccc 30%,
-    #ddd 50%,
-    #ccc 70%,
-    #fff 80%,
-    #999 95%);
     color: black;
     display: flex;
     flex-direction: column;
     align-items: center;
     scroll-behavior: smooth;
+}
+
+#background {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
 }
 
 .header-content-wrapper {
@@ -58,6 +56,7 @@ footer {
     height: 80px;
     width: 100%;
     box-shadow: 0 -1px 1px 1px black;
+    z-index: 2;
 }
 
 /* elements */
