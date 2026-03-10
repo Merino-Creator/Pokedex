@@ -53,8 +53,9 @@ main {
 
 footer {
     display: flex;
-    justify-content: center;
-    height: 80px;
+    flex-direction: column;
+    align-items: center;
+    height: 135px;
     width: 100%;
     box-shadow: 0 -1px 1px 1px black;
     z-index: 2;
@@ -73,4 +74,9 @@ a:hover {
 
 p {
     margin: 0;
+}
+
+h4 {
+    margin: 16px;
+    font-size: 20px;
 }
