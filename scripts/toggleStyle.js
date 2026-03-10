@@ -22,11 +22,6 @@ let isGold = false;
 let shimmerActive = false;
 
 function toggleMode(element) {
-    let cardBottomRef = document.querySelector('.big-card-bottom');
-
-    cardBottomRef.classList.toggle('gold');
-    cardBottomRef.classList.toggle('silver');
-
     document.body.style.background = isGold ? silverGradient : goldGradient;
     isGold = !isGold;
 
