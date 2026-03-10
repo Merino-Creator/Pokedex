@@ -42,5 +42,8 @@ async function fetchPokemonByIdFromAll(id) {
 
 async function selectGeneration(gen) {
     currentGen = gen;
+    renderCount = 20;
+    smallCardRef.innerHTML ="";
     await savePokeData();
+    await addSmallPokemonCard();
 }
