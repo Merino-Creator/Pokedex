@@ -45,7 +45,6 @@ const goldGradient = `
 ;
 
 let isGold = false;
-let shimmerActive = false;
 
 function toggleGenTwo(element) {
     background.style.background = isGold ? silverGradient : goldGradient;
@@ -55,15 +54,6 @@ function toggleGenTwo(element) {
         ? 'assets/images/ho-oh.png'
         : 'assets/images/lugia.png'
         ;
-}
-
-function toggleShimmer() {
-    shimmerActive = !shimmerActive;
-    if (shimmerActive) {
-        document.body.classList.add('shimmer');
-    } else {
-        document.body.classList.remove('shimmer');
-    }
 }
 
 /* Gen 3 */
